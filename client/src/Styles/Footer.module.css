@@ -1,0 +1,40 @@
+.footerContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.5% 5%;
+    background-color: var(--faded);
+    color: var(--inverse);
+    font-weight: 900;
+    box-shadow: 10px 5px 50px black;
+}
+
+.logo {
+    border-right: 1px solid black;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.contacts img {
+    margin-right: 15px;
+}
+
+.info {
+    font-size: 25px;
+    margin-left: 100px;
+    border-right: 1px solid black;
+}
+
+.info li {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.section3 {
+    float: right;
+    margin-left: auto;
+}

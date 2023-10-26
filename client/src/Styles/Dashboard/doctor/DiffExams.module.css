@@ -1,0 +1,80 @@
+.container {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    grid-column: 4/13;
+    padding: 0 10px 10px 10px;
+    display: grid;
+    overflow-y: scroll;
+    /* height: 40em; */
+}
+
+.choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: sticky;
+    top: 0;
+    background: var(--faded);
+    padding: 15px;
+}
+
+.choices ul {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+}
+
+.choices ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.all {
+    float: right;
+    margin-left: auto;
+    padding-right: 20px;
+    color: var(--dark);
+}
+
+.item {
+    padding: 0 10%;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.choices ul li:nth-child(1) {
+    grid-column: 1/4;
+}
+
+
+.choices ul li:nth-child(2) {
+    grid-column: 4/7;
+}
+
+.choices ul li:nth-child(3) {
+    grid-column: 7/10;
+}
+
+.choiceData {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    height: 70px;
+    margin: 20px 0;
+    padding: 0 20px;
+    box-shadow: 0 0 0.09em 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.choiceData p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.createdAt {
+    float: right;
+    margin-left: auto;
+}

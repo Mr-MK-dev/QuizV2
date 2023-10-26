@@ -1,0 +1,116 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 4;
+    gap: 20px;
+}
+
+.containerNorm {
+    background: none;
+}
+
+.exForm {
+    height: 100vh;
+    grid-row: 1/5;
+    grid-column: 2/13;
+    padding: 10px 10px 0 0;
+}
+
+.exFormNorm {
+    background: greenyellow;
+}
+
+/* new feature */
+.containerDark {
+    background: var(--colors-neutral100);
+}
+
+.exFormDark {
+    background: #15202B;
+    color: var(--faded);
+}
+
+/* Dark */
+.leftControlsDark {
+    background: #15202B;
+    margin-left: 15px;
+    border-radius: 15px;
+}
+
+.openQBDark {
+    font-size: 35px;
+    color: aliceblue;
+}
+
+.themeDark {
+    font-size: 40px;
+    color: aliceblue;
+}
+
+
+/*  */
+.qbIsOpen {
+    height: 100vh;
+    grid-row: 1/5;
+    grid-column: 2/13;
+    padding: 10px 10px 0 0;
+}
+
+/*  */
+.leftControls {
+    grid-row: 2/4;
+    box-shadow: 10px 0 5px 0 rgba(0, 0, 0, 0.5);
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    margin-left: 15px;
+    border-radius: 15px;
+}
+
+.leftControlsNorm {
+    background: greenyellow;
+}
+
+.leftControlsNorm .theme {
+    font-size: 40px;
+    color: #15202B;
+}
+
+.openQB {
+    font-size: 35px;
+}
+
+
+.leftControls * {
+    cursor: pointer;
+}
+
+/*  */
+
+.successfully {
+    width: 550px;
+    margin: 25px;
+    margin-left: 450px;
+    border-radius: 20px;
+    background-color: var(--successii);
+    color: var(--faded);
+    padding: 20px;
+    display: grid;
+}
+
+.successfully p {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.successfully button {
+    margin-left: 450px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.container:has(.belongToSuccessed) {
+    display: none;
+}

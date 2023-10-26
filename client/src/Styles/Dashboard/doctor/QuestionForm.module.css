@@ -1,0 +1,113 @@
+.selectType {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 15px;
+    margin-left: 25px;
+}
+
+.selectType h2 {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.selectType ul {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 1;
+    grid-column: 1;
+    gap: 20px;
+}
+
+.selectType ul li {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    cursor: pointer;
+    justify-items: center;
+    width: 30%;
+}
+
+.selectType ul li:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.addQuestion {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    padding: 15px;
+}
+
+.addQuestion .question {
+    grid-column: 2/11;
+    height: 50px;
+    font-size: 25px;
+}
+
+.addQuestion ul {
+    display: grid;
+    grid-column: 2/11;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+.addQuestion ul li {
+    font-size: 25px;
+}
+
+.addQuestion ul li input {
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.addQuestion .corrAnswer {
+    margin-top: 45px;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+    font-weight: 700;
+    grid-column: 12;
+}
+
+.addQuestion button {
+    grid-column: 3/10;
+    height: 30px;
+    font-family: Wingdings;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.addQuestion .openEnded {
+    grid-row: 2;
+    grid-column: 2/6;
+    grid-column: 2/11;
+    height: 50px;
+    font-size: 25px;
+    resize: none;
+}
+
+.truOrFalse {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    cursor: pointer;
+}
+.truOrFalse input {
+    width: 15px;
+    height: 15px;
+    float: right;
+    margin-left: auto;
+}
+.truOrFalse p {
+    margin-left: 10px;
+}
+
+
+.addQuestion select {
+    width: 120px;
+    height: 30px;
+    margin-top: 50px;
+}

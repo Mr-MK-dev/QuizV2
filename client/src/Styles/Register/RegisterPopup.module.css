@@ -1,0 +1,100 @@
+.respopContainer {
+    /* height: 100vh; */
+    /* padding: 2.5% 5%; */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 50px;
+}
+
+.popup {
+    grid-row: 2;
+    grid-column: 3/11;
+    border: 1px solid rgb(245, 204, 204);
+    border-radius: 20px;
+    /* width: 250px; */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+}
+
+.cardTitle {
+    font-family: cursive;
+    grid-column: 4/12;
+    grid-row: 1;
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 15px;
+}
+
+.choose {
+    grid-row: 2;
+    grid-column: 2/12;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.choose div {
+    border: 1px solid rgb(245, 204, 204);
+    border-radius: 15px;
+    height: 120px;
+    padding: 1em;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.choose div:hover {
+    cursor: pointer;
+    border: 2px solid green;
+}
+
+
+.student,
+.doctor {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.student p,
+.doctor p {
+    grid-row: 2;
+    grid-column: 1/13;
+}
+
+input[type="radio"] {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.choose div:has(input[type=radio]:checked) {
+    border: 2px solid green;
+}
+
+.actions {
+    grid-column: 4/11;
+    grid-row: 3;
+}
+
+.actions button {
+    font-family: cursive;
+    border: none;
+    border-radius: 50px;
+    width: 350px;
+    height: 45px;
+    font-size: 25px;
+    background-color: green;
+    color: var(--faded)
+}
+
+.actions button:disabled {
+    background: transparent;
+    color: rgb(209, 160, 160);
+    border: 1px solid rgb(230, 208, 208);
+    cursor: not-allowed;
+}
+
+.actions p {
+    margin: 25px;
+    font-size: 20px;
+
+}

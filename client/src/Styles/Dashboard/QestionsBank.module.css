@@ -1,0 +1,135 @@
+.container {
+    background-color: var(--faded);
+    height: 100%;
+    padding: 10px;
+}
+
+.qbHead {
+    display: grid;
+    grid-template-columns: 3fr 2fr repeat(3, 1fr);
+    margin-top: 1em;
+    align-items: center;
+}
+
+.qbHead h1 {
+    margin: 0;
+}
+
+.backward {
+    cursor: pointer;
+}
+
+.qbHead .lecNum {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.lecNum input::-webkit-outer-spin-button,
+.lecNum input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.lecNum input {
+    margin-left: 15px;
+    width: 10%;
+    border: none;
+    border-bottom: 1px solid;
+}
+
+.lecNum input:hover {
+    border: none;
+    border-bottom: 1px solid;
+}
+
+.qbHead button {
+    font-family: Wingdings;
+    font-weight: 700;
+    margin: 0 10px;
+    height: 25px;
+    width: auto;
+
+}
+
+.questions {
+    display: grid;
+    gap: 15px;
+    padding: 0 10px;
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-top: 1px solid black;
+    padding-top: 15px;
+}
+
+.question {
+    padding: 0.5em;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.deleteQuestion {
+    padding: 0.2em;
+    grid-column: 1/13;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    color: var(--danger);
+}
+.deleteQuestion input[type="checkbox"] {
+    height: 30px;
+    width: 30px;
+}
+.questionHead {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.questionHead p {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--inverse);
+}
+
+.questionHead span {
+    /* background-color: black; */
+    float: right;
+    margin-left: auto;
+}
+
+.question ul {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.question li {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    font-weight: 700;
+}
+
+.option {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.exit {
+    float: right;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+
+body:has(.addQuestion) {
+    overflow-y: hidden;
+    background-color: black;
+}
+
+.openEndedAnswer{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: -15px;
+    grid-column: 1/13;
+}

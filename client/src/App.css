@@ -1,0 +1,72 @@
+:root {
+  --pri: #0275d8;
+  --success: #5cb85c;
+  --info: #5bc0de;
+  --warning: #f0ad4e;
+  --danger: #d9534f;
+  --inverse: #292b2c;
+  --faded: #f7f7f7;
+  --greOff: rgb(13, 138, 13);
+  --successii: #0f5132;
+  --snow: #F5FEFD;
+  --dark: #050100;
+  --colors-neutral800: #0E0E0E;
+  --colors-neutral700: #161616;
+  --colors-neutral600: #1D1D1D;
+  --colors-neutral500: #252525;
+  --colors-neutral400: #292929;
+  --colors-neutral300: #2D2D2D;
+  --colors-neutral200: #303030;
+  --colors-neutral100: #343434;
+}
+
+/* Scroll-Bar */
+::-webkit-scrollbar {
+  background-color: var(--faded);
+}
+
+::-webkit-scrollbar-track {
+  background: #4c6e91;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #15202B;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--info);
+}
+
+body,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Sofia", sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+
+li {
+  list-style-type: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+textarea {
+  resize: none;
+
+}
