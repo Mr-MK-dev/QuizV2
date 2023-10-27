@@ -1,6 +1,7 @@
-const Question = require('../../models/Question');
-const Quiz = require('../../models/Quiz');
-const User = require('../../models/User');
+const Question = require('../models/Question');
+const Quiz = require('../models/Quiz');
+const User = require('../models/User');
+const factory = require('./factroyController');
 exports.getQuizQues = async (req, res) => {
     try {
         const quizId = await Quiz.find({ _id: req.tokenValue._id });
@@ -20,21 +21,22 @@ exports.getQuizQues = async (req, res) => {
     }
 };
 
-exports.questionsBank = async (req, res) => {
-    try {
-        let lecture_no = req.query.no * 1;
+exports.questionsBank = factory.read(Question);
+//  async (req, res) => {
+//     try {
+//         let lecture_no = req.query.no * 1;
 
-        const questions = await Question.find({ lecture_no });
+//         const questions = await Question.find({ lecture_no });
 
-        res.json({
-            questions,
-        });
-    } catch (error) {
-        res.status(401).json({
-            msg: error.message,
-        });
-    }
-};
+//         res.json({
+//             questions,
+//         });
+//     } catch (error) {
+//         res.status(401).json({
+//             msg: error.message,
+//         });
+//     }
+// };
 
 exports.createQues = async (req, res) => {
     try {
@@ -47,7 +49,7 @@ exports.createQues = async (req, res) => {
             options,
             openEndedSubmittedAnswer,
         } = req.body;
-        // Throw errors to interrupt the normal flow of the program 
+        // Throw errors to interrupt the normal flow of the program
         if (!type) {
             throw new Error(
                 'Select question type (multiple choice, true false, open ended )'
@@ -96,21 +98,4 @@ exports.createQues = async (req, res) => {
     }
 };
 
-exports.deleteQuestion = async (req, res) => {
-    try {
-        const _id = req.params.id;
-        const deleted = await Question.findByIdAndDelete(_id);
-        res.json({
-            deleted,
-        });
-    } catch (error) {
-        res.json({
-            msg: "The question didn't delete",
-        });
-    }
-};
-// exports.answers = async (req,res)=>{
-//     const answers = req.body.answer;
-//     const questionId =
-//     const question = await w.find({})
-// }
+exports.deleteQuestion = factory.delete(Question);

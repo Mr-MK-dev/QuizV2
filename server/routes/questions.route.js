@@ -1,7 +1,7 @@
 const express = require('express');
 const quizRouter = express.Router();
-const quesController = require('./questions.Controller');
-const { verfyToken } = require('../../middlewares/jwt');
+const quesController = require('../Controller/questions.Controller');
+const { verfyToken } = require('../middlewares/jwt');
 
 // Rapid add
 quizRouter

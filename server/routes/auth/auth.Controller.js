@@ -11,19 +11,6 @@ exports.register = async (req, res) => {
 
         var stCode = req.body.stCode;
 
-        // const code = Math.floor(Math.random() * 100000);
-
-        if (
-            !email ||
-            !password ||
-            !role ||
-            !first_name ||
-            !last_name ||
-            !stCode
-        ) {
-            throw new Error('all data requird');
-        }
-
         let user = await User.find({ email });
 
         if (user.length > 0) throw new Error('Email already exists');

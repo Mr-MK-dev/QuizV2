@@ -2,7 +2,7 @@ const express = require('express');
 const authRouter = express.Router();
 const authController = require('./auth.Controller');
 const { verfyToken } = require('../../middlewares/jwt');
-// const { upload } = require('../../uploads/uploud.js');
+const { checkBody } = require('../../middlewares/checkBody');
 const multer = require('multer');
 
 // authRouter.route('/verify_user').get(authController.verify);
@@ -16,7 +16,19 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-authRouter.route('/signup').post(authController.register);
+authRouter
+    .route('/signup')
+    .post(
+        checkBody(
+            'first_name',
+            'last_name',
+            'email',
+            'role',
+            'password',
+            'stCode'
+        ),
+        authController.register
+    );
 authRouter.route('/login').post(authController.login);
 authRouter.route('/send_email').post(verfyToken, authController.sendEmail);
 authRouter.route('/verify').post(verfyToken, authController.verifyEmail);
@@ -27,6 +39,7 @@ authRouter
 
 authRouter.put(
     '/complete_sign_up',
+    checkBody('bio', 'profileImageUrl', 'username'),
     upload.single('profileImage'),
 
     verfyToken,
